@@ -56,6 +56,7 @@ FruitsPack fruits1 = new FruitsPack("Pacco frutta secca", "mandorle ecc", 4.6f, 
 
 Elettrodomestico washingMachine = new Elettrodomestico("Lavatrice", "Lava bene", 300f, 22, 24.7f, 52.2f, 1.05f, "Bianca");
 
+CiboScatola tuna = new CiboScatola("Rio Mare", "Pescato nel mediterraneo", 3.4f, 22, "pesce", 500f, 400f);
 
 //PRODOTTO ACQUA
 
@@ -91,6 +92,24 @@ Console.WriteLine("Descrizione prodotto: " + washingMachine.GetDescription());
 washingMachine.FullName();
 washingMachine.BasicPrice();
 washingMachine.FullPrice();
+Console.WriteLine("-----------------------------------");
+
+//PRODOTTO CIBO IN SCATOLA
+
+//Richiedo variabili a classe Prodotto e Stampa
+Console.WriteLine("-----------------------------------");
+Console.WriteLine("STAMPA PRODOTTO: CIBO IN SCATOLA");
+code = tuna.GetCode();
+Console.WriteLine("Il codice creato per il cibo in scatola è " + code);
+
+Console.WriteLine("Hai inserito i seguenti dati:");
+
+Console.WriteLine("Nome prodotto: " + tuna.GetName());
+Console.WriteLine("Descrizione prodotto: " + tuna.GetDescription());
+
+tuna.FullName();
+tuna.BasicPrice();
+tuna.FullPrice();
 Console.WriteLine("-----------------------------------");
 
 
