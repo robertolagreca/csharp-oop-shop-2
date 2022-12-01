@@ -42,25 +42,25 @@ namespace CSharpShop2
        
         //METODI PUBBLICI
 
-        public float drinkBottle(float litreB,float drinkB)
+        public float drinkBottle()
         {
             float newLitres;
-            newLitres = (float)litreB - drinkB;
+            newLitres = (float)this.litre - this.drink;
 
             return newLitres;
         }
 
-        public float fillBottle(float litreB, float drinkB)
+        public float fillBottle()
         {
             float newLitres;
-            newLitres = (float)litreB+ drinkB;
+            newLitres = (float)this.litre + this.fill;
 
             return newLitres;
         }
 
-        public float emptyBottle(float litreB)
+        public float emptyBottle()
         {
-            return litreB = (float)0;
+            return this.litre = (float)0;
         }
 
         public override void FullName()
@@ -70,7 +70,7 @@ namespace CSharpShop2
             Console.WriteLine("La sua sorgente è " + this.source);
             Console.WriteLine("Capacita di " + this.litre);
             Console.WriteLine("Il pH è " + this.ph);
-
+            Console.WriteLine("Consumato " + this.drink + " l. Acqua rimasta nella bottiglia " + drinkBottle());
         }
     }
 }

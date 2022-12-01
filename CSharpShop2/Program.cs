@@ -49,7 +49,7 @@ description = "Autore Italo Calvino";
 
 //creazione oggetti.
 //Prodotto prodObject = new Prodotto(name, description, price, iva);
-Acqua bottle1 = new Acqua("Sor", "Naturale", 1.9f, 6, 1.5f, 8, "Trentino");
+Acqua bottle1 = new Acqua("Sor", "Naturale", 1.9f, 6, 1.5f, 8, "Trentino",1f);
 
 
 
