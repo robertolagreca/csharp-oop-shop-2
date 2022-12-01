@@ -85,27 +85,27 @@ namespace CSharpShop2
         }
 
         //Stampa prezzo senza IVA
-        public void BasicPrice(float price)
+        public void BasicPrice()
         {
-            Console.WriteLine("Il prezzo base è " + price + " euro");
+            Console.WriteLine("Il prezzo base è " + this.price + " euro");
         }
 
         //Stampa prezzo con IVA
-        public void FullPrice(float price, int iva)
+        public void FullPrice()
         {
             float fullPrice;
 
-            fullPrice = (float)Math.Round(price + (price * (iva / 100f)), 2);
+            fullPrice = (float)Math.Round(this.price + (this.price * (iva / 100f)), 2);
 
             Console.WriteLine("Il prezzo compreso di IVA è  " + fullPrice.ToString() + " euro");
         }
 
         //Stampa codice+nome
-        public virtual void FullName(string name, int code)
+        public virtual void FullName()
         {
             string fullName;
 
-            fullName = code.ToString() + name;
+            fullName = this.code.ToString() + this.name;
             Console.WriteLine("Il nome completo è " + fullName);
         }
     }

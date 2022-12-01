@@ -49,7 +49,7 @@ description = "Autore Italo Calvino";
 
 //creazione oggetti.
 //Prodotto prodObject = new Prodotto(name, description, price, iva);
-Acqua bottle1 = new Acqua("Sor", "Naturale", 0.5f, 2, 1.5f, 8, "Trentino");
+Acqua bottle1 = new Acqua("Sor", "Naturale", 1.9f, 6, 1.5f, 8, "Trentino");
 
 
 
@@ -76,18 +76,18 @@ Console.WriteLine("Descrizione prodotto " + bottle1.GetDescription());
 
 
 //Metodo che restituisce codice + nome
-bottle1.FullName(name, code);
+bottle1.FullName();
 
 
 
 //Metodo che restituisce il prezzo base
-bottle1.BasicPrice(price);
+bottle1.BasicPrice();
 //Console.WriteLine(prodObject.GetPrice());
 
 
 
 //Metodo che restituisce il prezzo compreso di IVA.
-bottle1.FullPrice(price, iva);
+bottle1.FullPrice();
 //Console.WriteLine(prodObject.GetIva());
 
 

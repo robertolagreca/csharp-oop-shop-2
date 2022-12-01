@@ -19,7 +19,7 @@ namespace CSharpShop2
         //COSTRUTTORI
         public Acqua(string name, string description, float price, int iva, float litre, float ph, string source, float drink = 0f, float fill = 0f, float empty = 0f) : base(name, description, price, iva)
         {
-            CreateCode();
+            //CreateCode(); usa in automatico quello della super classe
             this.litre = litre;
             this.drink = drink;
             this.fill = fill;
@@ -63,13 +63,13 @@ namespace CSharpShop2
             return litreB = (float)0;
         }
 
-        public override void FullName(string name, int code)
+        public override void FullName()
         {
            
-            base.FullName(name,code);
-            Console.WriteLine("La sua sorgente è " + source);
-            Console.WriteLine("Capacita di " + litre);
-            Console.WriteLine("Il pH è " + ph);
+            base.FullName();
+            Console.WriteLine("La sua sorgente è " + this.source);
+            Console.WriteLine("Capacita di " + this.litre);
+            Console.WriteLine("Il pH è " + this.ph);
 
         }
     }
