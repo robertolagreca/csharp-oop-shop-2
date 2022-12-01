@@ -42,7 +42,7 @@ namespace CSharpShop2
        
         //METODI D'UTILITA'
 
-        public float drinkBottle()
+        private float drinkBottle()
         {
             float newLitres;
             newLitres = (float)this.litre - this.drink;
@@ -50,7 +50,7 @@ namespace CSharpShop2
             return newLitres;
         }
 
-        public float fillBottle()
+        private float fillBottle()
         {
             float newLitres;
             newLitres = (float)this.litre + this.fill;
@@ -62,7 +62,7 @@ namespace CSharpShop2
             return newLitres;
         }
 
-        public float emptyBottle()
+        private float emptyBottle()
         {
             return this.litre = (float)0;
         }
