@@ -9,7 +9,7 @@ namespace CSharpShop2
     public class FruitsPack : Prodotto
     {
         //ATTRIBUTI
-        List<string> fruitsList;
+        private List<string> fruitsList;
 
         //COSTRUTTORE
         public FruitsPack(string name, string description, float price, int iva, List<string>fruitsList) : base(name, description, price, iva)

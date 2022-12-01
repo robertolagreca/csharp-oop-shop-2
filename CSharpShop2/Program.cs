@@ -54,15 +54,7 @@ Acqua bottle1 = new Acqua("Sor", "Naturale", 1.9f, 6, 1.5f, 8, "Trentino",1f);
 List<string> fruits = new List<string>() {"Mandorle" , "Noci" , "Nocciole"};
 FruitsPack fruits1 = new FruitsPack("Pacco frutta secca", "mandorle ecc", 4.6f, 22, fruits);
 
-
-
-//Input utente variabili
-//Console.WriteLine("Inserisci nome, descrizione, prezzo e iva");
-
-/*name = Console.ReadLine();
-description = Console.ReadLine();
-price = float.Parse(Console.ReadLine());
-iva = int.Parse(Console.ReadLine()); */
+Elettrodomestico washingMachine = new Elettrodomestico("Lavatrice", "Lava bene", 300f, 22, 24.7f, 52.2f, 1.05f, "Bianca");
 
 
 //PRODOTTO ACQUA
@@ -83,7 +75,23 @@ bottle1.BasicPrice();
 bottle1.FullPrice();
 Console.WriteLine("-----------------------------------");
 
+//PRODOTTO ELETTRODOMESTICO
 
+//Richiedo variabili a classe Prodotto e Stampa
+Console.WriteLine("-----------------------------------");
+Console.WriteLine("STAMPA PRODOTTO: LAVATRICE");
+code = washingMachine.GetCode();
+Console.WriteLine("Il codice creato per la lavatrice è " + code);
+
+Console.WriteLine("Hai inserito i seguenti dati:");
+
+Console.WriteLine("Nome prodotto: " + washingMachine.GetName());
+Console.WriteLine("Descrizione prodotto: " + washingMachine.GetDescription());
+
+washingMachine.FullName();
+washingMachine.BasicPrice();
+washingMachine.FullPrice();
+Console.WriteLine("-----------------------------------");
 
 
 
