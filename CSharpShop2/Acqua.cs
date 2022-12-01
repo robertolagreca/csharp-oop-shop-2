@@ -40,7 +40,7 @@ namespace CSharpShop2
 
         //SETTERS
        
-        //METODI PUBBLICI
+        //METODI D'UTILITA'
 
         public float drinkBottle()
         {
@@ -54,6 +54,10 @@ namespace CSharpShop2
         {
             float newLitres;
             newLitres = (float)this.litre + this.fill;
+            if(this.fill > this.litre)
+            {
+                return this.litre;
+            }
 
             return newLitres;
         }
@@ -63,9 +67,9 @@ namespace CSharpShop2
             return this.litre = (float)0;
         }
 
+        //METODI PUBBLICI
         public override void FullName()
         {
-           
             base.FullName();
             Console.WriteLine("La sua sorgente è " + this.source);
             Console.WriteLine("Capacita di " + this.litre);

@@ -51,10 +51,13 @@ description = "Autore Italo Calvino";
 //Prodotto prodObject = new Prodotto(name, description, price, iva);
 Acqua bottle1 = new Acqua("Sor", "Naturale", 1.9f, 6, 1.5f, 8, "Trentino",1f);
 
+List<string> fruits = new List<string>() {"Mandorle" , "Noci" , "Nocciole"};
+FruitsPack fruits1 = new FruitsPack("Pacco frutta secca", "mandorle ecc", 4.6f, 22, fruits);
+
 
 
 //Input utente variabili
-Console.WriteLine("Inserisci nome, descrizione, prezzo e iva");
+//Console.WriteLine("Inserisci nome, descrizione, prezzo e iva");
 
 /*name = Console.ReadLine();
 description = Console.ReadLine();
@@ -62,34 +65,58 @@ price = float.Parse(Console.ReadLine());
 iva = int.Parse(Console.ReadLine()); */
 
 
-//PRODOTTO ACQUA PROVA
+//PRODOTTO ACQUA
 
 //Richiedo variabili a classe Prodotto e Stampa
+Console.WriteLine("-----------------------------------");
+Console.WriteLine("STAMPA PRODOTTO: BOTTIGLIA D'ACQUA");
 code = bottle1.GetCode();
 Console.WriteLine("Il codice creato per l'acqua è " + code);
 
 Console.WriteLine("Hai inserito i seguenti dati:");
 
-Console.WriteLine("Nome prodotto " + bottle1.GetName());
-Console.WriteLine("Descrizione prodotto " + bottle1.GetDescription());
+Console.WriteLine("Nome prodotto: " + bottle1.GetName());
+Console.WriteLine("Descrizione prodotto: " + bottle1.GetDescription());
+
+bottle1.FullName();
+bottle1.BasicPrice();
+bottle1.FullPrice();
+Console.WriteLine("-----------------------------------");
+
+
+
+
+
+//PRODOTTO SACCHETTO FRUTTA
+
+//Richiedo variabili a classe Prodotto e Stampa
+Console.WriteLine("-----------------------------------");
+Console.WriteLine("STAMPA PRODOTTO: SACCHETTO DI FRUTTA");
+code = fruits1.GetCode();
+Console.WriteLine("Il codice creato per il sacchetto di frutta è " + code);
+
+Console.WriteLine("Hai inserito i seguenti dati:");
+
+Console.WriteLine("Nome prodotto: " + fruits1.GetName());
+Console.WriteLine("Descrizione prodotto: " + fruits1.GetDescription());
 
 
 
 //Metodo che restituisce codice + nome
-bottle1.FullName();
+fruits1.FullName();
 
 
 
 //Metodo che restituisce il prezzo base
-bottle1.BasicPrice();
+fruits1.BasicPrice();
 //Console.WriteLine(prodObject.GetPrice());
 
 
 
 //Metodo che restituisce il prezzo compreso di IVA.
-bottle1.FullPrice();
+fruits1.FullPrice();
 //Console.WriteLine(prodObject.GetIva());
-
+Console.WriteLine("-----------------------------------");
 
 
 // PRODOTTO LIBRO
