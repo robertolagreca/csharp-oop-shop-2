@@ -9,32 +9,69 @@ namespace CSharpShop2
     public class Acqua : Prodotto
     {
         //ATTRIBUTI
-        int litre;
+        float litre;
         float ph;
+        float drink;
+        float fill;
+        float empty;
         string source;
-
+        
         //COSTRUTTORI
-        public Acqua(string name, string description, float price, int iva, int litre, float ph, string source) : base(name, description, price, iva)
+        public Acqua(string name, string description, float price, int iva, float litre, float drink, float fill, float empty, float ph, string source) : base(name, description, price, iva)
         {
+            CreateCode();
             this.litre = litre;
+            this.drink = drink;
+            this.fill = fill;
+            this.empty = empty;
             this.ph = ph;
             this.source = source;
         }
-        
+
         //GETTERS
-        public int GetLitre
+
+        //public int GetCode() { return code; }
+        public float GetLitre() { return litre; }
+        public float GetDrink() { return drink; }
+        public float GetFill() { return fill; }
+        public float GetEmpty() { return empty; }
+        public float GetPh() { return ph; }
+        public string GetSource() { return source; }
+
+        //SETTERS
+       
+        //METODI PUBBLICI
+
+        public float drinkBottle(float litreB,float drinkB)
         {
-            get { return litre; }
+            float newLitres;
+            newLitres = (float)litreB - drinkB;
+
+            return newLitres;
         }
 
-        public float GetPh
+        public float fillBottle(float litreB, float drinkB)
         {
-            get { return ph; }
+            float newLitres;
+            newLitres = (float)litreB+ drinkB;
+
+            return newLitres;
         }
 
-        public string GetSource
+        public float emptyBottle(float litreB)
         {
-            get { return source; }
+            return litreB = (float)0;
+        }
+
+        public override void FullName(string name, int code)
+        {
+            string fullName = ""; ;
+            base.FullName(name, code);
+            Console.WriteLine("Il nome completo è " + fullName);
+            Console.WriteLine("La sua sorgente è " + source);
+            Console.WriteLine("Capacita di " + litre);
+            Console.WriteLine("Il pH è " + ph);
+
         }
     }
 }

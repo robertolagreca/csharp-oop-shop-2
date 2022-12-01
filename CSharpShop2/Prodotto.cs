@@ -74,7 +74,7 @@ namespace CSharpShop2
         //METODI
 
         //Generazione numero casuale
-        private void CreateCode()
+        private protected void CreateCode()
         {
             Random rnd = new Random();
             int randCode;
@@ -101,7 +101,7 @@ namespace CSharpShop2
         }
 
         //Stampa nome+codice
-        public void FullName(string name, int code)
+        public virtual void FullName(string name, int code)
         {
             string fullName;
 
