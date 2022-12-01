@@ -21,7 +21,7 @@ namespace CSharpShop2
 
             if(weightNetto > 300f)
             {
-                weightNetto = 300f;
+                this.weightNetto = 300f;
             }
         }
 
