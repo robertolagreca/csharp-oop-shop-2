@@ -43,26 +43,57 @@ code = 0;
 iva = 22;
 price = 12.99f;
 name = "I sentieri dei nidi di ragno";
-description = "Autore Italo Calvino";
+description = "Autore Italo Calvino"; 
 
 
 
 //creazione oggetti.
-Prodotto prodObject = new Prodotto(name, description, price, iva);
+//Prodotto prodObject = new Prodotto(name, description, price, iva);
+Acqua bottle1 = new Acqua("Sor", "Naturale", 0.5f, 2, 1.5f, 8, "Trentino");
 
 
 
 //Input utente variabili
 Console.WriteLine("Inserisci nome, descrizione, prezzo e iva");
 
-name = Console.ReadLine();
+/*name = Console.ReadLine();
 description = Console.ReadLine();
 price = float.Parse(Console.ReadLine());
-iva = int.Parse(Console.ReadLine());
+iva = int.Parse(Console.ReadLine()); */
+
+
+//PRODOTTO ACQUA PROVA
+
+//Richiedo variabili a classe Prodotto e Stampa
+code = bottle1.GetCode();
+Console.WriteLine("Il codice creato per l'acqua è " + code);
+
+Console.WriteLine("Hai inserito i seguenti dati:");
+
+Console.WriteLine("Nome prodotto " + bottle1.GetName());
+Console.WriteLine("Descrizione prodotto " + bottle1.GetDescription());
 
 
 
+//Metodo che restituisce codice + nome
+bottle1.FullName(name, code);
 
+
+
+//Metodo che restituisce il prezzo base
+bottle1.BasicPrice(price);
+//Console.WriteLine(prodObject.GetPrice());
+
+
+
+//Metodo che restituisce il prezzo compreso di IVA.
+bottle1.FullPrice(price, iva);
+//Console.WriteLine(prodObject.GetIva());
+
+
+
+// PRODOTTO LIBRO
+/*
 //Set delle variabili nell'oggetto
 prodObject.SetName(name);
 prodObject.SetDescription(description);
@@ -96,4 +127,4 @@ prodObject.BasicPrice(price);
 
 //Metodo che restituisce il prezzo compreso di IVA.
 prodObject.FullPrice(price, iva);
-//Console.WriteLine(prodObject.GetIva());
+//Console.WriteLine(prodObject.GetIva()); */

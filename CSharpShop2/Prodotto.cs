@@ -100,7 +100,7 @@ namespace CSharpShop2
             Console.WriteLine("Il prezzo compreso di IVA è  " + fullPrice.ToString() + " euro");
         }
 
-        //Stampa nome+codice
+        //Stampa codice+nome
         public virtual void FullName(string name, int code)
         {
             string fullName;

@@ -17,7 +17,7 @@ namespace CSharpShop2
         string source;
         
         //COSTRUTTORI
-        public Acqua(string name, string description, float price, int iva, float litre, float drink, float fill, float empty, float ph, string source) : base(name, description, price, iva)
+        public Acqua(string name, string description, float price, int iva, float litre, float ph, string source, float drink = 0f, float fill = 0f, float empty = 0f) : base(name, description, price, iva)
         {
             CreateCode();
             this.litre = litre;
@@ -65,9 +65,8 @@ namespace CSharpShop2
 
         public override void FullName(string name, int code)
         {
-            string fullName = ""; ;
-            base.FullName(name, code);
-            Console.WriteLine("Il nome completo è " + fullName);
+           
+            base.FullName(name,code);
             Console.WriteLine("La sua sorgente è " + source);
             Console.WriteLine("Capacita di " + litre);
             Console.WriteLine("Il pH è " + ph);
